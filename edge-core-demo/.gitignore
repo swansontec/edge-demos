@@ -1,0 +1,15 @@
+# Build output:
+/edge/
+/lib/
+
+# Package managers:
+node_modules/
+npm-debug.log
+package-lock.json
+yarn-error.log
+stats.json
+
+# Editors:
+.DS_Store
+.idea/
+.vscode/

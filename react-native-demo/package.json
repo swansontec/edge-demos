@@ -4,10 +4,22 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
+    "fix": "npm run lint -- --fix",
     "ios": "react-native run-ios",
+    "lint": "eslint --ext .js,.jsx .",
     "start": "react-native start",
-    "test": "jest",
-    "lint": "eslint ."
+    "test": "jest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && flow"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": "eslint"
+  },
+  "jest": {
+    "preset": "react-native"
   },
   "dependencies": {
     "react": "16.9.0",
@@ -16,14 +28,24 @@
   "devDependencies": {
     "@babel/core": "^7.7.2",
     "@babel/runtime": "^7.7.2",
-    "@react-native-community/eslint-config": "^0.0.5",
+    "babel-eslint": ">=10.0.0",
     "babel-jest": "^24.9.0",
-    "eslint": "^6.7.0",
+    "eslint": ">=6.2.2",
+    "eslint-config-standard-kit": ">=0.14.2",
+    "eslint-plugin-flowtype": ">=4.3.0",
+    "eslint-plugin-import": ">=2.18.0",
+    "eslint-plugin-node": ">=9.1.0",
+    "eslint-plugin-prettier": ">=3.0.0",
+    "eslint-plugin-promise": ">=4.2.1",
+    "eslint-plugin-react": ">=7.14.2",
+    "eslint-plugin-simple-import-sort": ">=4.0.0",
+    "eslint-plugin-standard": ">=4.0.0",
+    "flow-bin": "^0.105.2",
+    "husky": ">=3.0.0",
     "jest": "^24.9.0",
+    "lint-staged": ">=9.0.0",
     "metro-react-native-babel-preset": "^0.57.0",
+    "prettier": ">=1.0.0",
     "react-test-renderer": "16.9.0"
-  },
-  "jest": {
-    "preset": "react-native"
   }
 }

@@ -3,6 +3,8 @@ PODS:
   - disklet (0.4.4):
     - React
   - DoubleConversion (1.1.6)
+  - edge-login-ui-rn (0.6.1):
+    - React
   - FBLazyVector (0.61.4)
   - FBReactNativeSpec (0.61.4):
     - Folly (= 2018.10.22.00)
@@ -227,6 +229,8 @@ PODS:
     - React-cxxreact (= 0.61.4)
     - React-jsi (= 0.61.4)
     - ReactCommon/jscallinvoker (= 0.61.4)
+  - RNDeviceInfo (5.3.1):
+    - React
   - RNFS (2.13.3):
     - React
   - Yoga (1.14.0)
@@ -234,6 +238,7 @@ PODS:
 DEPENDENCIES:
   - disklet (from `../node_modules/disklet`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
+  - edge-login-ui-rn (from `../node_modules/edge-login-ui-rn`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/Libraries/FBReactNativeSpec`)
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
@@ -264,6 +269,7 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - ReactCommon/jscallinvoker (from `../node_modules/react-native/ReactCommon`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - RNDeviceInfo (from `../node_modules/react-native-device-info`)
   - RNFS (from `../node_modules/react-native-fs`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -276,6 +282,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/disklet"
   DoubleConversion:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
+  edge-login-ui-rn:
+    :path: "../node_modules/edge-login-ui-rn"
   FBLazyVector:
     :path: "../node_modules/react-native/Libraries/FBLazyVector"
   FBReactNativeSpec:
@@ -330,6 +338,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/Libraries/Vibration"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RNDeviceInfo:
+    :path: "../node_modules/react-native-device-info"
   RNFS:
     :path: "../node_modules/react-native-fs"
   Yoga:
@@ -339,6 +349,7 @@ SPEC CHECKSUMS:
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   disklet: e96005d8f739209fdb4bae6151bf8d63df5f5d52
   DoubleConversion: 5805e889d232975c086db112ece9ed034df7a0b2
+  edge-login-ui-rn: a351e843477cc7630ea7b6e00369bb36c46b3720
   FBLazyVector: feb35a6b7f7b50f367be07f34012f34a79282fa3
   FBReactNativeSpec: 51477b84b1bf7ab6f9ef307c24e3dd675391be44
   Folly: 30e7936e1c45c08d884aa59369ed951a8e68cf51
@@ -366,6 +377,7 @@ SPEC CHECKSUMS:
   React-RCTText: 21934e0a51d522abcd0a275407e80af45d6fd9ec
   React-RCTVibration: 0f76400ee3cec6edb9c125da49fed279340d145a
   ReactCommon: a6a294e7028ed67b926d29551aa9394fd989c24c
+  RNDeviceInfo: 6f20764111df002b4484f90cbe0a861be29bcc6c
   RNFS: c9bbde46b0d59619f8e7b735991c60e0f73d22c1
   Yoga: ba3d99dbee6c15ea6bbe3783d1f0cb1ffb79af0f
 

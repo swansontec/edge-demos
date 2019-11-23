@@ -3,6 +3,6 @@
 import { AppRegistry } from 'react-native'
 
 import { name as appName } from './app.json'
-import { App } from './src/App.js'
+import { EdgeCoreManager } from './src/EdgeCoreManager.js'
 
-AppRegistry.registerComponent(appName, () => App)
+AppRegistry.registerComponent(appName, () => EdgeCoreManager)

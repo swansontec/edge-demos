@@ -5,6 +5,7 @@
   "scripts": {
     "android": "react-native run-android",
     "fix": "npm run lint -- --fix",
+    "postinstall": "./postinstall.sh",
     "ios": "react-native run-ios",
     "lint": "eslint --ext .js,.jsx .",
     "start": "react-native start",
@@ -22,8 +23,18 @@
     "preset": "react-native"
   },
   "dependencies": {
+    "disklet": "^0.4.4",
+    "edge-core-js": "^0.16.14",
+    "edge-currency-bitcoin": "^4.6.4",
+    "edge-exchange-plugins": "^0.8.12",
     "react": "16.9.0",
-    "react-native": "0.61.4"
+    "react-native": "0.61.4",
+    "react-native-fast-crypto": "^1.8.1",
+    "react-native-fs": "git://github.com/EdgeApp/react-native-fs.git#edge/removeEncoding",
+    "react-native-randombytes": "^3.5.3",
+    "react-native-tcp": "git://github.com/EdgeApp/react-native-tcp.git#edge-fixes",
+    "react-native-webview": "^7.5.1",
+    "stream": "^0.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.7.2",

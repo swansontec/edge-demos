@@ -38,3 +38,7 @@ cat >"$core_assets/index.html" <<HTML
   </body>
 </html>
 HTML
+
+# Hack in our RN fixes:
+cp ./wtf-hax/Canvas.js ./node_modules/react-native-qrcode/lib/Canvas.js
+ cp ./wtf-hax/ScrollingList.js ./node_modules/edge-login-ui-rn/src/native/components/common/ScrollingList.js

@@ -60,5 +60,8 @@
     "metro-react-native-babel-preset": "^0.57.0",
     "prettier": ">=1.0.0",
     "react-test-renderer": "16.9.0"
+  },
+  "resolutions": {
+    "react-native-keyboard-aware-scroll-view": "0.9.1"
   }
 }

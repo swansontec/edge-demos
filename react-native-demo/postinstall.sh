@@ -8,7 +8,7 @@ set -e
 cd "$(dirname "$0")"
 
 # Install cocoapods native libraries:
-if [[ "$unamestr" == 'Darwin' ]]; then
+if [ `uname` == 'Darwin' ]; then
   ( cd ios; pod install )
 fi
 

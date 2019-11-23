@@ -23,16 +23,21 @@
     "preset": "react-native"
   },
   "dependencies": {
+    "@react-native-community/art": "^1.0.3",
     "disklet": "^0.4.4",
     "edge-core-js": "^0.16.14",
     "edge-currency-bitcoin": "^4.6.4",
     "edge-exchange-plugins": "^0.8.12",
+    "edge-login-ui-rn": "^0.6.2",
     "react": "16.9.0",
     "react-native": "0.61.4",
+    "react-native-device-info": "^5.3.1",
     "react-native-fast-crypto": "^1.8.1",
     "react-native-fs": "git://github.com/EdgeApp/react-native-fs.git#edge/removeEncoding",
+    "react-native-linear-gradient": "^2.5.6",
     "react-native-randombytes": "^3.5.3",
     "react-native-tcp": "git://github.com/EdgeApp/react-native-tcp.git#edge-fixes",
+    "react-native-vector-icons": "^6.6.0",
     "react-native-webview": "^7.5.1",
     "stream": "^0.0.2"
   },

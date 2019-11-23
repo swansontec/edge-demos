@@ -2,6 +2,7 @@
 
 import { MakeEdgeContext } from 'edge-core-js'
 import { type EdgeContext } from 'edge-core-js/types'
+import makeAccountbasedIo from 'edge-currency-accountbased/lib/react-native-io.js'
 import makeBitcoinIo from 'edge-currency-bitcoin/lib/react-native-io.js'
 import makeExchangeIo from 'edge-exchange-plugins/lib/react-native-io.js'
 import React, { PureComponent } from 'react'
@@ -22,11 +23,13 @@ const contextOptions = {
   appId: '',
   plugins: {
     bitcoin: true,
+    ethereum: {},
     coincap: true
   }
 }
 
 const nativeIo = {
+  'edge-currency-accountbased': makeAccountbasedIo(),
   'edge-currency-bitcoin': makeBitcoinIo(),
   'edge-exchange-plugins': makeExchangeIo()
 }

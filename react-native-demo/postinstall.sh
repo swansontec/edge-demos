@@ -23,6 +23,7 @@ if [ -d "$core_assets" ]; then
 fi
 mkdir -p "$core_assets"
 cp ./node_modules/edge-core-js/lib/react-native/edge-core.js "$core_assets"
+cp ./node_modules/edge-currency-accountbased/lib/react-native/edge-currency-accountbased.js "$core_assets"
 cp ./node_modules/edge-currency-bitcoin/lib/react-native/edge-currency-bitcoin.js "$core_assets"
 cp ./node_modules/edge-exchange-plugins/lib/react-native/edge-exchange-plugins.js "$core_assets"
 
@@ -36,6 +37,7 @@ cat >"$core_assets/index.html" <<HTML
   </head>
   <body>
     <script src="edge-core.js"></script>
+    <script src="edge-currency-accountbased.js"></script>
     <script src="edge-currency-bitcoin.js"></script>
     <script src="edge-exchange-plugins.js"></script>
     <script>

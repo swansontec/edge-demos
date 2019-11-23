@@ -1,6 +1,6 @@
 // @flow
 
-import { type EdgeContext } from 'edge-core-js/types'
+import { type EdgeAccount, type EdgeContext } from 'edge-core-js/types'
 import { LoginScreen } from 'edge-login-ui-rn'
 import React, { Component } from 'react'
 import { Alert, SafeAreaView, StyleSheet, Text, View } from 'react-native'
@@ -12,11 +12,12 @@ type Props = {
 }
 
 type State = {
+  account?: EdgeAccount,
   showLogin: boolean
 }
 
 export class MainScene extends Component<Props, State> {
-  state = { showLogin: false }
+  state = { account: undefined, showLogin: false }
 
   handleShowLogin = () => {
     this.setState({ showLogin: true })
@@ -25,9 +26,39 @@ export class MainScene extends Component<Props, State> {
   handleLogin = (error: Error | void, account: EdgeAccount) => {
     if (error) {
       Alert.alert('Failed to login ', String(error))
+      this.setState({ showLogin: false })
       return
     }
     Alert.alert('Yay ')
+    this.setState({ account, showLogin: false })
+  }
+
+  handleLogout = () => {
+    const { account } = this.state
+    if (account != null) {
+      account.logout()
+      this.setState({ account: undefined })
+    }
+  }
+
+  renderAccount(account: EdgeAccount) {
+    const { allKeys } = account
+
+    return (
+      <SafeAreaView style={styles.scene}>
+        <View style={{ padding: 8 }}>
+          <Button onPress={this.handleLogout}>
+            <Text>Logout</Text>
+          </Button>
+        </View>
+        <View style={{ padding: 8 }}>
+          <Text>Edge Account (with wallets):</Text>
+          {Object.keys(allKeys).map(id => (
+            <Text key={id}>{allKeys[id].type}</Text>
+          ))}
+        </View>
+      </SafeAreaView>
+    )
   }
 
   renderContext() {
@@ -42,7 +73,7 @@ export class MainScene extends Component<Props, State> {
           </Button>
         </View>
         <View style={{ padding: 8 }}>
-          <Text>Active Users:</Text>
+          <Text>Edge Context (with users):</Text>
           {localUsers.map(user => (
             <Text key={user.username}>{user.username}</Text>
           ))}
@@ -65,8 +96,10 @@ export class MainScene extends Component<Props, State> {
   }
 
   render() {
-    const { showLogin } = this.state
-    return showLogin ? this.renderLogin() : this.renderContext()
+    const { account, showLogin } = this.state
+    if (showLogin) return this.renderLogin()
+    if (account != null) return this.renderAccount(account)
+    return this.renderContext()
   }
 }
 

@@ -53,8 +53,8 @@ export class MainScene extends Component<Props, State> {
         </View>
         <View style={{ padding: 8 }}>
           <Text>Edge Account (with wallets):</Text>
-          {Object.keys(allKeys).map(id => (
-            <Text key={id}>{allKeys[id].type}</Text>
+          {allKeys.map(info => (
+            <Text key={info.id}>{info.type}</Text>
           ))}
         </View>
       </SafeAreaView>
@@ -85,13 +85,11 @@ export class MainScene extends Component<Props, State> {
   renderLogin() {
     const { context } = this.props
     return (
-      <SafeAreaView style={styles.scene}>
-        <LoginScreen
-          context={context}
-          accountOptions={{}}
-          onLogin={this.handleLogin}
-        />
-      </SafeAreaView>
+      <LoginScreen
+        context={context}
+        accountOptions={{}}
+        onLogin={this.handleLogin}
+      />
     )
   }
 

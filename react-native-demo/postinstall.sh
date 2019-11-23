@@ -8,7 +8,13 @@ set -e
 cd "$(dirname "$0")"
 
 # Install cocoapods native libraries:
-( cd ios; pod install )
+if [[ "$unamestr" == 'Darwin' ]]; then
+  ( cd ios; pod install )
+fi
+
+# Remove inclusion of c++_shared.so library since we are using jsc-android which already includes it
+sed "s/\,[[:space:]]'-DANDROID_STL=c++_shared'//g" ./node_modules/react-native-fast-crypto/android/build.gradle > temp-build.gradle
+mv temp-build.gradle ./node_modules/react-native-fast-crypto/android/build.gradle
 
 # Copy edge-core-js WebView contents:
 core_assets="./android/app/src/main/assets/edge-core"

@@ -31,7 +31,7 @@ cat >"$core_assets/index.html" <<HTML
   <body>
     <script src="edge-core.js"></script>
     <script src="edge-currency-bitcoin.js"></script>
-    <script src="edge-echange-plugins.js"></script>
+    <script src="edge-exchange-plugins.js"></script>
     <script>
       window.lockEdgeCorePlugins()
     </script>

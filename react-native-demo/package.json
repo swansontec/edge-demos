@@ -25,6 +25,7 @@
   "dependencies": {
     "disklet": "^0.4.4",
     "edge-core-js": "^0.16.14",
+    "edge-currency-accountbased": "^0.5.5",
     "edge-currency-bitcoin": "^4.6.4",
     "edge-exchange-plugins": "^0.8.12",
     "edge-login-ui-rn": "^0.6.1",
@@ -63,6 +64,7 @@
     "react-test-renderer": "16.9.0"
   },
   "resolutions": {
-    "react-native-keyboard-aware-scroll-view": "0.9.1"
+    "react-native-keyboard-aware-scroll-view": "0.9.1",
+    "scrypt.js": "0.3.0"
   }
 }

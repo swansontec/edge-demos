@@ -23,8 +23,9 @@ if [ -d "$core_assets" ]; then
 fi
 mkdir -p "$core_assets"
 cp ./node_modules/edge-core-js/lib/react-native/edge-core.js "$core_assets"
-cp ./node_modules/edge-exchange-plugins/lib/react-native/edge-exchange-plugins.js "$core_assets"
+cp ./node_modules/edge-currency-accountbased/lib/react-native/edge-currency-accountbased.js "$core_assets"
 cp ./node_modules/edge-currency-bitcoin/lib/react-native/edge-currency-bitcoin.js "$core_assets"
+cp ./node_modules/edge-exchange-plugins/lib/react-native/edge-exchange-plugins.js "$core_assets"
 
 # Write out an edge-core-js index.html file:
 cat >"$core_assets/index.html" <<HTML
@@ -36,6 +37,7 @@ cat >"$core_assets/index.html" <<HTML
   </head>
   <body>
     <script src="edge-core.js"></script>
+    <script src="edge-currency-accountbased.js"></script>
     <script src="edge-currency-bitcoin.js"></script>
     <script src="edge-exchange-plugins.js"></script>
     <script>
@@ -47,4 +49,4 @@ HTML
 
 # Hack in our RN fixes:
 cp ./wtf-hax/Canvas.js ./node_modules/react-native-qrcode/lib/Canvas.js
- cp ./wtf-hax/ScrollingList.js ./node_modules/edge-login-ui-rn/src/native/components/common/ScrollingList.js
+cp ./wtf-hax/ScrollingList.js ./node_modules/edge-login-ui-rn/src/native/components/common/ScrollingList.js

@@ -19,8 +19,8 @@ type State = {
 }
 
 const contextOptions = {
-  apiKey: '',
-  appId: '',
+  apiKey: '0b5776a91bf409ac10a3fe5f3944bf50417209a0',
+  appId: 'com.mydomain.myapp',
   plugins: {
     bitcoin: true,
     ethereum: {},

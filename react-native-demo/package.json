@@ -31,7 +31,7 @@
     "edge-exchange-plugins": "^0.8.12",
     "edge-login-ui-rn": "^0.6.2",
     "react": "16.9.0",
-    "react-native": "0.61.4",
+    "react-native": "0.62.3",
     "react-native-device-info": "^5.3.1",
     "react-native-fast-crypto": "^1.8.1",
     "react-native-fs": "git://github.com/EdgeApp/react-native-fs.git#edge/removeEncoding",
